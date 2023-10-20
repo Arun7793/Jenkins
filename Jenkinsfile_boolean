@@ -1,0 +1,29 @@
+boolean stageResult = true
+
+pipeline {
+    agent any
+
+    stages {
+        stage ('STAGE1') {
+            steps {
+                script {
+                    try {
+                        echo "this is stage1"
+                        sh 'sleep2'
+                    } catch (Exception e)
+                     stageResult == false
+
+                    }
+                }
+            }
+            stage ('STAGE2') {
+                steps {
+                    scirpt {
+                        if (stageResult == false) 
+                        echo "stage 2 should run"
+                    }
+                }
+            }
+        }
+    }
+}
