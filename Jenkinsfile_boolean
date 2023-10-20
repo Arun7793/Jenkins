@@ -7,11 +7,11 @@ pipeline {
         stage ('STAGE1') {
             steps {
                 script {
-                    try {
+                    try{
                         echo "this is stage1"
                         sh 'sleep2'
                         sh 'exit 1'
-                    } catch (Exception e)
+                    }catch (Exception e){
                      stageResult == false
 
                     }
