@@ -7,14 +7,14 @@ pipeline {
         stage ('BUILD') {
           agent { label 'master' }
             steps {
-                sh 'sleep 10'
+                sh 'sleep 2'
 
             }
         }  
         stage ('TEST') {
           agent { label 'slave1' }
             steps {
-                sh 'sleep 10'
+                sh 'sleep 2'
 
 
             }
@@ -23,7 +23,7 @@ pipeline {
         stage ('DEPLOY') {
             agent any
             steps {
-                sh 'sleep 20'
+                sh 'sleep 2'
             }
         }   
   
