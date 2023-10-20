@@ -5,7 +5,7 @@ pipeline {
 
     stages {
         stage ('BUILD') {
-          agent { label 'slave1' }
+          agent { label 'master' }
             steps {
                 sh 'sleep 2'
 
