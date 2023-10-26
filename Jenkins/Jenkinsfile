@@ -1,5 +1,10 @@
 pipeline {
   agent any
+
+  parameters {
+  choice choices: ['TEST', 'QA', 'PROD', 'PRE-pROD'], name: 'ENVIRON'
+}
+
             
     
 
