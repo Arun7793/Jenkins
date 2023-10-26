@@ -6,13 +6,13 @@ pipeline {
     stages {
         stage ('BUILD') {
             steps {
-                sh 'sleep 10'
+                sh 'sleep 2'
 
             }
         }  
         stage ('TEST') {
             steps {
-                sh 'sleep 10'
+                sh 'sleep 2'
 
 
             }
@@ -20,7 +20,7 @@ pipeline {
 
         stage ('DEPLOY') {
             steps {
-                sh 'sleep 20'
+                sh 'sleep 5'
             }
         }   
   
