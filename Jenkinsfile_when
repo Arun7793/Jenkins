@@ -5,11 +5,11 @@ pipeline {
     stages {
         stage ('build') {
                 when {
-                    branch 'master'
+                    branch 'main'
 
                 }
                 steps {
-                    echo "run only if its a main branch"
+                    sh 'sleep 20'
                 }
             }
         }
